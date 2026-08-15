@@ -1,0 +1,168 @@
+/*
+ * grafiq's design tokens (see tailwind.config.js in the old React app),
+ * scoped under .grafiq-scope so this ONLY affects this one custom admin
+ * page — it never leaks into Medusa's native Products/Orders/Customers
+ * pages, which keep the standard Medusa UI look.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Barlow:wght@400;500;600&display=swap");
+
+.grafiq-scope {
+  --gq-ink: #0d0d0d;
+  --gq-panel: #1a1a1a;
+  --gq-paper: #ffffff;
+  --gq-volt: #cad600;
+  --gq-slate: #808080;
+  --gq-line: #2b2b2b;
+
+  background: var(--gq-ink);
+  color: var(--gq-paper);
+  font-family: "Barlow", sans-serif;
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.grafiq-scope .gq-title {
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  font-size: 28px;
+  letter-spacing: 0.02em;
+  margin-bottom: 28px;
+}
+
+.grafiq-scope .gq-section {
+  margin-bottom: 36px;
+}
+
+.grafiq-scope .gq-eyebrow {
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gq-volt);
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.grafiq-scope .gq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.grafiq-scope .gq-grid.gq-grid-full {
+  grid-template-columns: 1fr;
+}
+
+.grafiq-scope .gq-field label {
+  display: block;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gq-slate);
+  margin-bottom: 6px;
+}
+
+.grafiq-scope input.gq-input,
+.grafiq-scope textarea.gq-input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--gq-paper);
+  outline: none;
+  padding: 9px 12px;
+  font-size: 14px;
+  font-family: "Barlow", sans-serif;
+  border-radius: 2px;
+  transition: border-color 0.15s ease;
+}
+
+.grafiq-scope input.gq-input:focus,
+.grafiq-scope textarea.gq-input:focus {
+  border-color: var(--gq-volt);
+}
+
+.grafiq-scope input.gq-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.grafiq-scope .gq-help {
+  font-size: 12px;
+  color: var(--gq-slate);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.grafiq-scope .gq-feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  border: 1px solid var(--gq-line);
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.grafiq-scope .gq-integration-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--gq-line);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  background: var(--gq-panel);
+}
+
+.grafiq-scope .gq-integration-row .gq-int-name {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.04em;
+  font-size: 15px;
+}
+
+.grafiq-scope .gq-badge {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+
+.grafiq-scope .gq-badge.gq-ok {
+  color: var(--gq-ink);
+  background: var(--gq-volt);
+}
+
+.grafiq-scope .gq-badge.gq-missing {
+  color: var(--gq-slate);
+  border: 1px solid var(--gq-slate);
+}
+
+.grafiq-scope .gq-save-btn {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--gq-volt);
+  color: var(--gq-ink);
+  border: none;
+  padding: 11px 26px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.grafiq-scope .gq-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.grafiq-scope .gq-saved {
+  color: var(--gq-volt);
+  font-size: 13px;
+  margin-left: 14px;
+}
+
+.grafiq-scope .gq-error {
+  color: #f87171;
+  font-size: 13px;
+  margin-left: 14px;
+}

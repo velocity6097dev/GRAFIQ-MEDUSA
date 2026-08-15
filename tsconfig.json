@@ -1,0 +1,10 @@
+{
+  "extends": "@medusajs/framework/tsconfig",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "./.medusa/server",
+    "jsx": "react-jsx"
+  },
+  "include": ["src", "medusa-config.ts"],
+  "exclude": ["node_modules", ".medusa"]
+}

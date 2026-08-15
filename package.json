@@ -1,0 +1,30 @@
+{
+  "name": "grafiq-medusa",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "medusa build",
+    "dev": "medusa develop",
+    "start": "medusa start",
+    "db:migrate": "medusa db:migrate",
+    "db:generate": "medusa db:generate store-settings"
+  },
+  "dependencies": {
+    "@medusajs/admin-sdk": "2.4.0",
+    "@medusajs/framework": "2.4.0",
+    "@medusajs/icons": "2.4.0",
+    "@medusajs/medusa": "2.4.0",
+    "@devx-commerce/razorpay": "2.0.0",
+    "medusa-shiprocket-fulfillment-sbl": "0.0.30",
+    "razorpay": "^2.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@mikro-orm/cli": "6.4.3",
+    "typescript": "^5.5.4"
+  }
+}
