@@ -5,13 +5,14 @@
   "engines": {
     "node": ">=20"
   },
-  "scripts": {
-    "build": "medusa build",
-    "dev": "medusa develop",
-    "start": "medusa start",
-    "db:migrate": "medusa db:migrate",
-    "db:generate": "medusa db:generate store-settings"
-  },
+ "scripts": {
+  "build": "medusa build",
+  "dev": "medusa develop",
+  "start": "cd ./.medusa/server && npm install && NODE_ENV=production medusa start",
+  "predeploy": "medusa db:migrate",
+  "db:migrate": "medusa db:migrate",
+  "db:generate": "medusa db:generate store-settings"
+},
   "dependencies": {
     "@medusajs/admin-sdk": "2.4.0",
     "@medusajs/framework": "2.4.0",
